@@ -40,6 +40,26 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
           <div className="flex items-center gap-2">
             <div className="text-2xl font-bold text-primary">ReferralTree</div>
           </div>
+          <div className="hidden md:flex ml-8 space-x-4">
+            <a
+              href="/"
+              className="text-gray-700 hover:text-primary font-medium"
+            >
+              Dashboard
+            </a>
+            <a
+              href="/crypto"
+              className="text-gray-700 hover:text-primary font-medium"
+            >
+              Crypto Staking
+            </a>
+            <a
+              href="/tasks"
+              className="text-gray-700 hover:text-primary font-medium"
+            >
+              Tasks & KYC
+            </a>
+          </div>
         </div>
 
         {/* Center - Search bar (hidden on mobile) */}
