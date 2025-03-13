@@ -53,6 +53,12 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             >
               Crypto Staking
             </a>
+            <a
+              href="/tasks"
+              className="text-gray-700 hover:text-primary font-medium"
+            >
+              Tasks & KYC
+            </a>
           </div>
         </div>
 

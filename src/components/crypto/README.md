@@ -26,15 +26,3 @@ This directory contains components for the crypto staking feature, which allows 
 6. User confirms staking transaction
 7. User can monitor staking rewards in the dashboard
 8. User can unstake assets after lock period ends
-
-## GitHub Pages Deployment
-
-The application is automatically deployed to GitHub Pages using a GitHub Actions workflow. The workflow is triggered on pushes to the main branch and performs the following steps:
-
-1. Checkout the repository
-2. Set up Node.js
-3. Install dependencies
-4. Build the application
-5. Deploy to GitHub Pages
-
-The deployment workflow is defined in `.github/workflows/deploy.yml`.
