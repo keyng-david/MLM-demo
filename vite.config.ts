@@ -15,7 +15,7 @@ export default defineConfig({
   // Update the base property for GitHub Pages
   base: process.env.NODE_ENV === "development" 
     ? "/" 
-    : process.env.VITE_BASE_PATH || "/your-repo-name/", // Replace 'your-repo-name' with your actual repository name
+    : process.env.VITE_BASE_PATH || "/MLM-demo/", 
   optimizeDeps: {
     entries: ["src/main.tsx", "src/tempobook/**/*"],
   },
