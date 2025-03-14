@@ -12,8 +12,7 @@ if (process.env.TEMPO === "true") {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Update the base property for GitHub Pages
-  base: process.env.NODE_ENV === "development" 
+  // base: process.env.NODE_ENV === "development" 
     ? "/" 
     : process.env.VITE_BASE_PATH || "/MLM-demo/", 
   optimizeDeps: {
