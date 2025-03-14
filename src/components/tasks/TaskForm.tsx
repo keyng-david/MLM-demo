@@ -1,3 +1,4 @@
+
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -68,12 +69,21 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel }) => {
   });
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    const newTask: Task = {
-      id: task?.id || `task-${uuidv4()}`,
-      ...values,
-    };
-    onSubmit(newTask);
+      const newTask: Task = {
+          id: task?.id || `task-${uuidv4()}`,
+          title: values.title,
+          description: values.description,
+          dueDate: values.dueDate,
+          status: values.status,
+          priority: values.priority,
+          kycRequired: values.kycRequired,
+          kycStatus: values.kycStatus,
+          completionPercentage: values.completionPercentage,
+
+      };
+      onSubmit(newTask);
   };
+  
 
   const watchKycRequired = form.watch("kycRequired");
 
