@@ -1,3 +1,5 @@
+//src/components/landing/Features.tsx
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +11,7 @@ import {
   TrendingUp,
   Layers,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const features = [
   {
@@ -79,13 +81,15 @@ const Features = () => {
 
         <div className="mt-16 text-center">
           <Button
-            asChild
+            asChild  // Add asChild here
             className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-lg font-medium"
           >
-            <a href="/#pricing">
+            <Link to="/#pricing">  {/* Corrected to use Link */}
+            <>
               Explore All Features
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </>
+            </Link>
           </Button>
         </div>
       </div>
