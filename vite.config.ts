@@ -10,10 +10,9 @@ if (process.env.TEMPO === "true") {
   conditionalPlugins.push(["tempo-devtools/swc", {}]);
 }
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  // base: process.env.NODE_ENV === "development"  ? "/" 
-    : process.env.VITE_BASE_PATH || "/MLM-demo/", 
+  base: process.env.NODE_ENV === "production" ? "/MLM-demo/" : "/",
+
   optimizeDeps: {
     entries: ["src/main.tsx", "src/tempobook/**/*"],
   },
@@ -33,4 +32,7 @@ export default defineConfig({
     // @ts-ignore
     allowedHosts: true,
   },
+    build: {
+    outDir: 'dist', // Ensure the output directory is 'dist'
+  }
 });
