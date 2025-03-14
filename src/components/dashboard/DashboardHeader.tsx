@@ -45,6 +45,12 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               href="/"
               className="text-gray-700 hover:text-primary font-medium"
             >
+              Home
+            </a>
+            <a
+              href="/home"
+              className="text-gray-700 hover:text-primary font-medium"
+            >
               Dashboard
             </a>
             <a
