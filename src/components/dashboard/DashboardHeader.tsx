@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Bell, Settings, HelpCircle, Search, Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -10,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import {Link} from "react-router-dom"; //IMPORT
 
 interface DashboardHeaderProps {
   userName?: string;
@@ -41,33 +43,29 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             <div className="text-2xl font-bold text-primary">ReferralTree</div>
           </div>
           <div className="hidden md:flex ml-8 space-x-4">
-            <a
-              href="/"
-              className="text-gray-700 hover:text-primary font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="/home"
+            <Link to="/" className="text-gray-700 hover:text-primary font-medium">
+                Home
+            </Link>
+            <Link
+              to="/dashboard"
               className="text-gray-700 hover:text-primary font-medium"
             >
               Dashboard
-            </a>
-            <a
-              href="/crypto"
+            </Link>
+            <Link
+              to="/crypto"
               className="text-gray-700 hover:text-primary font-medium"
             >
               Crypto Staking
-            </a>
-            <a
-              href="/tasks"
+            </Link>
+            <Link
+              to="/tasks"
               className="text-gray-700 hover:text-primary font-medium"
             >
               Tasks & KYC
-            </a>
+            </Link>
           </div>
         </div>
-     
 
         {/* Right side - Notifications, help, settings, profile */}
         <div className="flex items-center gap-2">
