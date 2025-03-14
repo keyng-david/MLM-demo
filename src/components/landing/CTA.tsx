@@ -33,7 +33,7 @@ const CTA = () => {
             size="lg"
             className="border-emerald-300 text-white hover:bg-emerald-500 px-8 py-6 rounded-lg font-medium text-lg"
           >
-            <a href="#pricing">View Pricing</a>
+            <Link to="/#pricing">View Pricing</Link> {/* Changed to Link */}
           </Button>
         </div>
 
