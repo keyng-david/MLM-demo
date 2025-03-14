@@ -23,8 +23,10 @@ const CTA = () => {
             className="bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-6 rounded-lg font-medium text-lg shadow-lg shadow-emerald-900/20"
           >
             <Link to="/dashboard">
-              Get Started Free
-              <ArrowRight className="ml-2 h-5 w-5" />
+                <> {/* Fragment added */}
+                Get Started Free
+                <ArrowRight className="ml-2 h-5 w-5" />
+                </>
             </Link>
           </Button>
           <Button
@@ -33,7 +35,11 @@ const CTA = () => {
             size="lg"
             className="border-emerald-300 text-white hover:bg-emerald-500 px-8 py-6 rounded-lg font-medium text-lg"
           >
-            <Link to="/#pricing">View Pricing</Link> {/* Changed to Link */}
+            <Link to="/#pricing">  {/* Changed to Link */}
+                <> {/* Fragment added */}
+                  View Pricing
+                </>
+              </Link>
           </Button>
         </div>
 
